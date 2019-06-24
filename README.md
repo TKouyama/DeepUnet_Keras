@@ -6,7 +6,7 @@ Basic structure of Unet in this implementation is based on
 http://ni4muraano.hatenablog.com/entry/2017/08/10/101053
 
 DeepUnet paper:
-***
+https://arxiv.org/abs/1709.00201
 
 
 Results:
