@@ -1,2 +1,2 @@
 # DeepUnet_Keras
-This is an "image" branch of Keras implementation of Deep Unet
+This is an "image" branch for Keras implementation of Deep Unet
