@@ -15,9 +15,4 @@ Unet (Original)
 
 
 (Left) Simple Unet  (Right)  Deep Unet
-![Results](https://github.com/TKouyama/DeepUnet_Keras/blob/master/images/Unet_simple.png)
-
-Deep Unet
-
-![Results](https://github.com/TKouyama/DeepUnet_Keras/blob/master/images/Unet_deep.png)
-
+![Results](https://github.com/TKouyama/DeepUnet_Keras/blob/master/images/Unet_deep_rev01.png)
