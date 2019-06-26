@@ -25,7 +25,7 @@ Results:
 
 Memo:
 
-Data augmentaiton of horizontal flip significantly improved the segmentation results.
+Data augmentaiton (horizontal flip) significantly improved the segmentation results.
 
 Deep Unet seems to improve detail of segmentation area.
 
