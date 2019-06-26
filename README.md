@@ -9,6 +9,8 @@ Basic structure of Unet in this implementation is based on
 - http://ni4muraano.hatenablog.com/entry/2017/08/10/101053
 
 Usage:
+- (First download dataset)
+- mkdir check_points results
 - python train_and_prediction_aug.py
 
 
