@@ -152,8 +152,8 @@ def train_unet(input_dir_train, check_dir_train, input_channel_count, Batch_size
     #model.compile(loss = 'binary_crossentropy', optimizer=Adam(),metrics=['acc'])
 
     # for using pre-trained model
-    print("Load weight...")
-    model.load_weights(check_dir_train+'unet_weights.hdf5')
+    # print("Load weight...")
+    # model.load_weights(check_dir_train+'unet_weights.hdf5')
 
     # Training
     datagen = ImageDataGenerator(
@@ -241,7 +241,7 @@ if __name__ == '__main__':
     input_dir_train = './test_datasets/data/trainData/'
     check_dir_train = './check_points/'
     #Num_epoch = 150
-    Num_epoch = 60
+    Num_epoch = 180
 
     train_unet(input_dir_train, check_dir_train, input_channel_count, Batch_size, First_layer_filter_count, Num_epoch)
 
