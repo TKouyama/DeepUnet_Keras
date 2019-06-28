@@ -13,6 +13,7 @@ from keras.preprocessing.image import ImageDataGenerator
 
 ## Unet model (assuming unte.py is in the same directory)
 #from unet import UNet
+#from unet_deep_simple import UNet
 from unet_deep_modified import UNet
 
 IMAGE_SIZE = 256
@@ -116,17 +117,23 @@ def load_Y(folder_path):
     return images
 
 
-# function for measuring a dice coefficient
+## function for measuring a dice coefficient
 def dice_coef(y_true, y_pred):
     y_true = K.flatten(y_true)
     y_pred = K.flatten(y_pred)
     intersection = K.sum(y_true * y_pred)
     return 2.0 * intersection / (K.sum(y_true) + K.sum(y_pred) + 1.)
 
-
-# function for measuring loss value
+## function for measuring loss value
 def dice_coef_loss(y_true, y_pred):
     return 1.0 - dice_coef(y_true, y_pred)
+
+## Merge loss
+def bce_dice_loss(y_true, y_pred):
+    a = 0.5
+    b = 1-a
+    loss = a * binary_crossentropy(y_true, y_pred) + b * dice_loss(y_true, y_pred)
+    return loss
 
 #
 # function for training U-net
@@ -148,12 +155,13 @@ def train_unet(input_dir_train, check_dir_train, input_channel_count, Batch_size
     model = network.get_model()
 
     # Use (1-Dice coefficient) as loss, Adam as optimizer
-    model.compile(loss = dice_coef_loss, optimizer=Adam(),metrics=[dice_coef])
+    #model.compile(loss = dice_coef_loss, optimizer=Adam(),metrics=[dice_coef])
     #model.compile(loss = 'binary_crossentropy', optimizer=Adam(),metrics=['acc'])
+    model.compile(loss = bce_dice_loss, optimizer=Adam(),metrics=[dice_coef])
 
-    # for using pre-trained model
-    # print("Load weight...")
-    # model.load_weights(check_dir_train+'unet_weights.hdf5')
+    ## for using pre-trained model
+    #print("Load weight...")
+    #model.load_weights(check_dir_train+'unet_weights.hdf5')
 
     # Training
     datagen = ImageDataGenerator(
@@ -229,7 +237,7 @@ if __name__ == '__main__':
     input_channel_count = 3
 
     # Batch size 
-    Batch_size = 8 # 32
+    Batch_size = 16 # 32
 
     # for deep unet
     First_layer_filter_count = 32
@@ -240,8 +248,8 @@ if __name__ == '__main__':
     print("Training...")
     input_dir_train = './test_datasets/data/trainData/'
     check_dir_train = './check_points/'
-    #Num_epoch = 150
-    Num_epoch = 180
+    Num_epoch = 150
+    #Num_epoch = 60
 
     train_unet(input_dir_train, check_dir_train, input_channel_count, Batch_size, First_layer_filter_count, Num_epoch)
 
