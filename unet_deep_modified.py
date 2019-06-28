@@ -54,7 +54,7 @@ class UNet(object):
         enc3, res_enc3 = self._add_encoding_layer(filter_count*1,  enc2, True) # 64 => 32
         enc4, res_enc4 = self._add_encoding_layer(filter_count*2,  enc3, True) # 32 => 16
         enc5, res_enc5 = self._add_encoding_layer(filter_count*4,  enc4, True) # 16 => 8
-        enc6, res_enc6 = self._add_encoding_layer(filter_count*8, enc5, True) # 8 => 4
+        enc6, res_enc6 = self._add_encoding_layer(filter_count*8,  enc5, True) # 8 => 4
         enc7, res_enc7 = self._add_encoding_layer(filter_count*16, enc6, False) # 4 => 4
 
         # Decoder part:
