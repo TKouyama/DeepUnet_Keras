@@ -7,7 +7,8 @@ import numpy as np
 ## Keras
 import keras.backend as K
 from keras.optimizers import Adam
-from keras import losses
+#from keras import losse
+from keras.losses import *
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras.preprocessing.image import ImageDataGenerator
 
@@ -132,7 +133,7 @@ def dice_coef_loss(y_true, y_pred):
 def bce_dice_loss(y_true, y_pred):
     a = 0.5
     b = 1-a
-    loss = a * binary_crossentropy(y_true, y_pred) + b * dice_loss(y_true, y_pred)
+    loss = a * binary_crossentropy(y_true, y_pred) + b * dice_coef_loss(y_true, y_pred)
     return loss
 
 #
