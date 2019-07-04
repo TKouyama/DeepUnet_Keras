@@ -48,8 +48,6 @@ class UNet(object):
 
         # follwing encoder layers: 2層目以降
         filter_count = first_layer_filter_count # 32
- 
-        # follwing encoder layers: 2層目以降
         enc2, res_enc2 = self._add_encoding_layer(filter_count,    enc1, True) # 128 => 64
         enc3, res_enc3 = self._add_encoding_layer(filter_count*1,  enc2, True) # 64 => 32
         enc4, res_enc4 = self._add_encoding_layer(filter_count*2,  enc3, True) # 32 => 16
