@@ -27,5 +27,5 @@ Memo:
 
 - Data augmentaiton (horizontal flip) significantly improved the segmentation results.
 - Deep Unet seems to improve detail of segmentation area.
-- Loss merging dice loss and bce provides better segmentation shape.
+- Merged Loss with dice loss and bce provides better segmentation shape.
 
