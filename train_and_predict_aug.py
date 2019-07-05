@@ -14,7 +14,6 @@ from keras.preprocessing.image import ImageDataGenerator
 
 ## Unet model (assuming unte.py is in the same directory)
 #from unet import UNet
-#from unet_deep_simple import UNet
 from unet_deep_modified import UNet
 
 IMAGE_SIZE = 256
