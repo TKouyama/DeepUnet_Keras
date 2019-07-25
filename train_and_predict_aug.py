@@ -14,7 +14,9 @@ from keras.preprocessing.image import ImageDataGenerator
 
 ## Unet model (assuming unte.py is in the same directory)
 #from unet import UNet
-from unet_deep_modified import UNet
+#from unet_deep_simple import UNet
+#from unet_deep_modified import UNet
+from unet_deep_modified_se import UNet
 
 IMAGE_SIZE = 256
 
@@ -237,10 +239,13 @@ if __name__ == '__main__':
     input_channel_count = 3
 
     # Batch size 
-    Batch_size = 16 # 32
+    Batch_size = 8 # 32
+    #Batch_size = 32
 
     # for deep unet
+    #First_layer_filter_count = 48
     First_layer_filter_count = 32
+    #First_layer_filter_count = 16
 
     #
     # Train #
@@ -248,8 +253,9 @@ if __name__ == '__main__':
     print("Training...")
     input_dir_train = './test_datasets/data/trainData/'
     check_dir_train = './check_points/'
-    Num_epoch = 150
-    #Num_epoch = 60
+    #Num_epoch = 150
+    #Num_epoch = 120
+    Num_epoch = 60
 
     train_unet(input_dir_train, check_dir_train, input_channel_count, Batch_size, First_layer_filter_count, Num_epoch)
 
