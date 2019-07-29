@@ -1,5 +1,5 @@
 # DeepUnet_Keras
-Keras implementation of Deep Unet
+Keras implementation of Deep Unet with SE block
 
 DeepUnet paper:
 - https://arxiv.org/abs/1709.00201
