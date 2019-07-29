@@ -1,4 +1,4 @@
-# DeepUnet_Keras
+# DeepUnet_Keras_SE
 Keras implementation of Deep Unet with SE block
 
 DeepUnet paper:
