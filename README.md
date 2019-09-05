@@ -11,8 +11,8 @@ Basic structure of Unet in this implementation is based on
 Usage:
 - First, download dataset:
  [Daimler Pedestrian Segmaneation](http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Pedestrian_Segmentatio/daimler_pedestrian_segmentatio.html)
-- mkdir check_points results
-- python train_and_prediction_aug.py
+- $ mkdir check_points results
+- $ python train_and_prediction_aug.py
 
 
 ***
