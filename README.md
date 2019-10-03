@@ -12,6 +12,10 @@ Usage:
 - First, download dataset:
  [Daimler Pedestrian Segmaneation](http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Pedestrian_Segmentatio/daimler_pedestrian_segmentatio.html)
 - $ mkdir check_points results
+
+Edditing some paramters in train_and_prediction_aug.py.
+For instance, number of epochs (more than 200 epochs is recommended for deepunet + SE model).
+
 - $ python train_and_prediction_aug.py
 
 
