@@ -9,7 +9,8 @@ Basic structure of Unet in this implementation is based on
 - http://ni4muraano.hatenablog.com/entry/2017/08/10/101053
 
 Requirement:
-- tensorflow-gpu 1.13.2, not tensorflow-gpu > 2.0
+- tensorflow-gpu > 1.13.2, but not tensorflow-gpu > 2.0
+  (for 1.13.2 CUDA = 10.4, CuDNN = 7.4)
 
 Usage:
 - First, download dataset:
