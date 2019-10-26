@@ -8,6 +8,9 @@ DeepUnet paper:
 Basic structure of Unet in this implementation is based on
 - http://ni4muraano.hatenablog.com/entry/2017/08/10/101053
 
+Requirement:
+- tensorflow-gpu 1.13.2, not tensorflow-gpu > 2.0
+
 Usage:
 - First, download dataset:
  [Daimler Pedestrian Segmaneation](http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Pedestrian_Segmentatio/daimler_pedestrian_segmentatio.html)
