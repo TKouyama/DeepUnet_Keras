@@ -9,9 +9,11 @@ Basic structure of Unet in this implementation is based on
 - http://ni4muraano.hatenablog.com/entry/2017/08/10/101053
 
 Requirement:
-- tensorflow-gpu > 1.13.2, but not tensorflow-gpu > 2.0
-  (for 1.13.2 CUDA = 10.4, CuDNN = 7.4)
-  eg. pip install tensorflow-gpu==1.13.2
+- tensorflow-gpu > 1.13.2
+  eg. pip install tensorflow-gpu==1.13.2   (for 1.13.2 CUDA = 10.4, CuDNN = 7.4)
+
+- If tensorflow-gpu > 2.0, small corrections are needed.
+
 - opencv-python
 
 Usage:
